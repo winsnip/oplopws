@@ -1,0 +1,17 @@
+{
+  "name": "openloop",
+  "version": "1.0.0",
+  "main": "run.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.8",
+    "chalk": "^5.3.0"
+  }
+}
