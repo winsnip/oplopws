@@ -1,4 +1,4 @@
-# OpenLoop DePIN Airdrop Guide
+# OpenLoop DePIN Airdrop
 
 ## New Airdrops: OpenLoop DePIN - Alternative of Grass
 
