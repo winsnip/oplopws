@@ -17,21 +17,15 @@
    - Enter the **Code**: `ol0bc78bb8`
    - Log in with your **Password**
    - **Done!**
-
----
-
-## 📌 How to Earn Points?
-
-You can earn OpenLoop Points by following these steps:
-
-- Use the **Kiwi**, **Mises**, or **Google Chrome / Brave** browsers.
-- Open the browser daily.
-- Click **Boost reward** to earn additional points.
-- Complete social media tasks and **invite friends**.
-
 ---
 
 ## 📌 Additional Information
 
 - Built on the **Solana Blockchain**.
 - Backed by the **IPN Foundation** and other prestigious **VCs**.
+
+---
+# Guide on VPS using screen
+1. Clone this repo
+   ```
+   git clone 
