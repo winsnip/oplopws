@@ -26,6 +26,35 @@
 
 ---
 # Guide on VPS using screen
-1. Clone this repo
+Requirements : Nodejs and NPM, make sure u install nodejs, if u haven't 
+```
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+1. Clone this repo 
    ```
-   git clone 
+   git clone https://github.com/winsnip/oplopws.git
+   cd oplopws
+   ```
+2. Install dependencies
+   ```
+   npm install axios ping chalk readline-sync
+   npm init -y
+   npm install
+   ```
+3. Run script on screen
+   ```
+   screen -S oplopws
+   ```
+   ```
+   node oplopws.js
+   ```
+   📌Note : I don't recommend u run more than 3 accounts so that u points will be faster.
+4. Save screen using CTRL + A D
+---
+Jika anda ingin kami semakin berkembang jangan lupa kopinya
+<br>
+https://trakteer.id/Winsnipsupport/tip
+
+   
