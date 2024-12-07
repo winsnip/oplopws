@@ -145,7 +145,7 @@ const processAccount = async (bearerToken, accountId, totalAccounts, nextAccount
             )
         );
 
-        await countdown(15, accountId);
+        await countdown(5, accountId);
         
         console.log(chalk.blue.bold(`\n[Account ${accountId}] ⏳ Next requests cycle...\n`));
         nextAccount(); 
@@ -156,7 +156,7 @@ const processAccount = async (bearerToken, accountId, totalAccounts, nextAccount
         } else {
             console.error(chalk.redBright(error.message));
         }
-        await countdown(15, accountId); 
+        await countdown(10, accountId); 
         nextAccount();
     }
 };
@@ -185,7 +185,7 @@ const rl = readline.createInterface({
 
 const askForNewToken = () => {
     return new Promise((resolve) => {
-        rl.question(chalk.magenta('Masukkan Bearer Token baru (atau ketik "n" untuk mulai): '), (answer) => {
+        rl.question(chalk.magenta('Input new bearer token (or type "n" for start): '), (answer) => {
             resolve(answer);
         });
     });
@@ -206,7 +206,7 @@ const showLogo = () => {
 const start = async () => {
     showLogo();
     const savedTokens = getSavedTokens();
-    console.log(chalk.green(`🔑 Ditemukan ${savedTokens.length} token tersimpan`));
+    console.log(chalk.green(`🔑 Found ${savedTokens.length} token saved`));
 
     while (true) {
         const answer = await askForNewToken();
@@ -215,18 +215,18 @@ const start = async () => {
         }
         if (answer.trim()) {
             saveToken(answer.trim());
-            console.log(chalk.green('✅ Token baru berhasil disimpan!'));
+            console.log(chalk.green('✅ New token success saved!'));
         }
     }
 
     const allTokens = getSavedTokens();
     if (allTokens.length === 0) {
-        console.log(chalk.red('❌ Tidak ada token tersimpan. Mohon tambahkan minimal 1 token.'));
+        console.log(chalk.red('❌ Nothing token saved. Please add min 1 token.'));
         rl.close();
         return;
     }
 
-    console.log(chalk.green(`\n🚀 Menjalankan script untuk ${allTokens.length} akun secara berurutan...\n`));
+    console.log(chalk.green(`\n🚀 Running script for ${allTokens.length} account sequentially...\n`));
     rl.close();
 
     processAccountsSequentially(allTokens);
